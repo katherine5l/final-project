@@ -10,5 +10,15 @@ def main(page: ft.Page):
     expenseCats = ft.Dropdown(label="Expense Category", options=
                               [ft.dropdown.Option("Food"), ft.dropdown.Option("Health/Medicine"), ft.dropdown.Option("Trips"), ft.dropdown("Wishlist"), ft.dropdown.Option("House Bills"), ft.dropdown("Rent"), ft.dropdown("Other")])
 
+class PresupuestoApp:
+    def_init_(self, page: ft.Page):
+    self.page = page
+    self.page.title = "Manejador de Presupuestos"
+    self.page.window_width = 800
+    self.page.window_height = 600
+    self.page.horizontal_alignment = "center"
+    self.page.vertical_alignment = "start"
+    self.main_view()
+
 ft.app(target=main)
 
