@@ -20,5 +20,14 @@ class PresupuestoApp:
     self.page.vertical_alignment = "start"
     self.main_view()
 
+def main_view(self, e=None):
+    self.page.controls.clear()
+    titulo = ft.Text('Menú Principla", size=30, weight="bold")
+    btn_nuevo = ft.ElevatedButton ("Agregar nuevo presupuesto"), on_click=self.nuevo_presupuesto_view)
+    btn_lista = ft.ElevatedButton ("Listar presupuestos", on_click=self.listar_presupiestos_view)
+    self.page.add(titulo, btn_nuevo, btn_lista)
+    self.page.update()
+
+
 ft.app(target=main)
 
